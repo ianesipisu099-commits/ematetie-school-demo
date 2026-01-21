@@ -94,4 +94,11 @@ a {
   /* Make tap targets comfortable */
   a, button { touch-action: manipulation; }
 }
+/* Mobile-only: make muted text readable without changing desktop */
+@media (max-width: 768px) {
+  .text-muted-foreground {
+    color: rgb(55 65 81) !important; /* slate-700 */
+  }
+}
+
 html { -webkit-text-size-adjust: 100%; }
