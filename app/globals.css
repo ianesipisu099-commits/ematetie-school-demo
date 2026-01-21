@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* --- Color tokens (Tailwind-friendly) --- */
 :root {
   --background: 255 255 255;
   --foreground: 17 24 39;
@@ -12,46 +11,19 @@
 
   --border: 226 232 240;
 
-  /* Deep green brand */
   --brand: 22 101 52;
-  --brand-foreground: 255 255 255;
   --brand-soft: 22 101 52 / 10%;
 }
 
-/* Base */
 body {
   background-color: rgb(var(--background));
   color: rgb(var(--foreground));
 }
 
-/* A11y focus */
 :focus-visible {
   outline: 2px solid rgb(var(--brand));
   outline-offset: 3px;
 }
 
-/* --- Utility bridge (so your existing classnames look right) --- */
-.text-muted-foreground {
-  color: rgb(var(--muted-foreground));
-}
 
-.bg-muted {
-  background-color: rgb(var(--muted));
-}
-
-.border {
-  border-color: rgb(var(--border));
-}
-
-.text-brand {
-  color: rgb(var(--brand));
-}
-
-.bg-brand-soft {
-  background-color: rgb(var(--brand-soft));
-}
-
-.border-brand {
-  border-color: rgb(var(--brand));
-}
 
