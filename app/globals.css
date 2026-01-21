@@ -1,35 +1,85 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Brand colors */
 :root {
   --background: 255 255 255;
   --foreground: 17 24 39;
 
-  --muted: 248 250 252;
-  --muted-foreground: 71 85 105;
-
-  --border: 226 232 240;
-
   --brand: 22 101 52;
-  --brand-soft: 22 101 52 / 10%;
+  --brand-soft: 22 101 52 / 8%;
 }
 
+/* Accessibility: visible focus */
+:focus-visible {
+  outline: 2px solid rgb(var(--brand));
+  outline-offset: 3px;
+}
+
+/* Base styles */
 body {
   background-color: rgb(var(--background));
   color: rgb(var(--foreground));
 }
 
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* --- Demo polish layer (add-on) --- */
+:root {
+  --container-max: 72rem; /* 1152px */
+}
+
+/* Subtle page background + smoother text rendering */
+html,
+body {
+  background: #fbfbfc;
+}
+
+/* Make links feel cleaner */
+a {
+  text-underline-offset: 3px;
+}
+/* --- Brand color: Deep Green --- */
+:root {
+  --brand: 22 101 52;          /* deep green */
+  --brand-soft: 22 101 52 / 8%;
+}
+
+/* Brand utilities */
+.text-brand {
+  color: rgb(var(--brand));
+}
+
+.bg-brand {
+  background-color: rgb(var(--brand));
+}
+
+.bg-brand-soft {
+  background-color: rgb(var(--brand-soft));
+}
+
+.border-brand {
+  border-color: rgb(var(--brand));
+}
 :focus-visible {
   outline: 2px solid rgb(var(--brand));
   outline-offset: 3px;
 }
-/* Phone-only: increase contrast for muted text */
-@media (max-width: 768px) {
-  :root {
-    --muted-foreground: 55 65 81;
-  }
-}
-
-
-
