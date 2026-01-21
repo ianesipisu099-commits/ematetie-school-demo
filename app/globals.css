@@ -83,3 +83,15 @@ a {
   outline: 2px solid rgb(var(--brand));
   outline-offset: 3px;
 }
+/* Mobile-only: comfortable spacing and fit */
+@media (max-width: 640px) {
+  /* Slightly bigger default text for readability */
+  html { font-size: 16px; }
+
+  /* Prevent the site from feeling “zoomed out” */
+  body { -webkit-text-size-adjust: 100%; }
+
+  /* Make tap targets comfortable */
+  a, button { touch-action: manipulation; }
+}
+html { -webkit-text-size-adjust: 100%; }

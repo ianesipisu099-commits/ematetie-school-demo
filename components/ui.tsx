@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ComponentProps } from "react";
 
 export function Container({ children }: { children: React.ReactNode }) {
-  return <div className="mx-auto max-w-6xl px-4">{children}</div>;
+  return <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">{children}</div>;
 }
 
 export function Card({ children }: { children: React.ReactNode }) {

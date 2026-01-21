@@ -18,8 +18,12 @@ export const metadata: Metadata = {
     type: "website",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/icon.png",
   },
+};
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -29,6 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+
       <body>
         <SiteHeader />
         <main id="main" className="min-h-[70vh] focus:outline-none">

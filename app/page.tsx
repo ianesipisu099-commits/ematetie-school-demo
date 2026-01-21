@@ -8,7 +8,7 @@ export const metadata = {
 
 function HeroVisual() {
   return (
-    <div className="relative h-[260px] sm:h-[320px] md:h-[420px] overflow-hidden rounded-2xl border shadow-sm">
+    <div className="relative h-[240px] sm:h-[320px] md:h-[420px] overflow-hidden rounded-2xl border shadow-sm">
       <Image
         src="/images/school-gate.jpeg"
         alt="Ematetie Secondary School entrance"
@@ -71,7 +71,7 @@ export default function HomePage() {
             title="CBE Transition at a Glance"
             subtitle="A clear summary for parents, learners, and the community."
           />
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="grid gap-4 grid-cols-1 md:grid-cols-3">
             {school.cbe.cards.map((c, i) => (
               <Card key={c.title}>
                 <div className="relative mb-3 h-40 overflow-hidden rounded-xl">
