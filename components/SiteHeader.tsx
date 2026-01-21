@@ -22,7 +22,7 @@ export default function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b bg-white/80 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b bg-white">
       {/* Skip link (accessibility) */}
       <a
         href="#main"
@@ -65,16 +65,14 @@ export default function SiteHeader() {
             <span className="hidden sm:inline">{school.name}</span>
             <span className="sm:hidden">Ematetie</span>
           </Link>
-
-          {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-4 text-sm">
-  ... 
-  </nav>
-            {navLinks.map((l) => (
-              <Link key={l.href} className="hover:underline" href={l.href}>
-                {l.label}
-              </Link>
-            ))}
+{/* Desktop nav */}
+<nav className="hidden md:flex items-center gap-4 text-sm">
+  {navLinks.map((l) => (
+    <Link key={l.href} className="hover:underline" href={l.href}>
+      {l.label}
+    </Link>
+  ))}
+</nav>
           <button
   type="button"
   aria-label="Open menu"
