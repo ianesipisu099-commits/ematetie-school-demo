@@ -67,24 +67,23 @@ export default function SiteHeader() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden items-center gap-4 text-sm md:flex">
+          <nav className="hidden md:flex items-center gap-4 text-sm">
+  ... 
+  </nav>
             {navLinks.map((l) => (
               <Link key={l.href} className="hover:underline" href={l.href}>
                 {l.label}
               </Link>
             ))}
-          </nav>
-
-          {/* Mobile button */}
           <button
-            type="button"
-            aria-label="Open menu"
-            aria-expanded={open}
-            onClick={() => setOpen((v) => !v)}
-            className="rounded-xl border bg-white px-3 py-2 text-sm font-medium md:hidden"
-          >
-            {open ? "Close" : "Menu"}
-          </button>
+  type="button"
+  aria-label="Open menu"
+  aria-expanded={open}
+  onClick={() => setOpen((v) => !v)}
+  className="md:hidden rounded-xl border bg-white px-3 py-2 text-sm font-medium"
+>
+  {open ? "Close" : "Menu"}
+</button>
         </div>
 
         {/* Mobile drawer */}
