@@ -24,6 +24,12 @@ body {
   outline: 2px solid rgb(var(--brand));
   outline-offset: 3px;
 }
+/* Phone-only: increase contrast for muted text */
+@media (max-width: 768px) {
+  :root {
+    --muted-foreground: 55 65 81;
+  }
+}
 
 
 
