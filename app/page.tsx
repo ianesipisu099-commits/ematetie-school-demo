@@ -8,12 +8,12 @@ export const metadata = {
 
 function HeroVisual() {
   return (
-    <div className="relative h-[260px] sm:h-[320px] md:h-[420px] overflow-hidden rounded-2xl border shadow-sm">
+    <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border shadow-sm md:aspect-[16/9]">
       <Image
         src="/images/school-gate.jpeg"
         alt="Ematetie Secondary School entrance"
         fill
-        className="object-cover"
+        className="object-cover object-center"
         priority
       />
       <div className="absolute inset-0 bg-black/30" />
