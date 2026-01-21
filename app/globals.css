@@ -6,9 +6,8 @@
   --background: 255 255 255;
   --foreground: 17 24 39;
 
-  /* Make muted text darker so phone stays readable */
   --muted: 248 250 252;
-  --muted-foreground: 55 65 81; /* darker than before */
+  --muted-foreground: 71 85 105;
 
   --border: 226 232 240;
 
@@ -25,7 +24,6 @@ body {
   outline: 2px solid rgb(var(--brand));
   outline-offset: 3px;
 }
-
 
 
 
